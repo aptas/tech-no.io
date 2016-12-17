@@ -3,6 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const V8LazyParseWebpackPlugin = require('v8-lazy-parse-webpack-plugin');
 
@@ -142,6 +143,7 @@ const config = {
         minifyCSS: true,
       },
     }),
+		new CopyWebpackPlugin([{ from: path.resolve(__dirname, 'client', 'CNAME') }]),
     // Add shims/polyfills etc here. These will only be included in the output if
     // they're used within your code, otherwise they will be ignored.
     // Read more about import/export loaders here: https://webpack.github.io/docs/shimming-modules.html
