@@ -14,20 +14,6 @@ import classNames from 'classnames';
 import styles from './form.scss';
 
 /**
- * initialState of the component.
- *
- * @type {Object}
- */
-const initialState = {
-  sending: false,
-  focus: false,
-  error: null,
-  valid: false,
-  value: '',
-  response: null,
-};
-
-/**
  * This is the Form component.
  */
 export default class Form extends Component {
@@ -42,7 +28,14 @@ export default class Form extends Component {
   constructor(props) {
     super(props);
 
-    this.state = initialState;
+    this.state = {
+		  sending: false,
+		  focus: false,
+		  error: null,
+		  valid: false,
+		  value: '',
+		  response: null,
+		};
 
     this.locked = false;
   }
@@ -137,10 +130,6 @@ export default class Form extends Component {
     };
   }
 
-  reset = () => {
-    this.setState(initialState);
-  }
-
   /**
    * Create and send fetch request through formspree for simple mail passthrough.
    *
@@ -172,17 +161,27 @@ export default class Form extends Component {
       .then((json) => {
         const { success } = json;
 
+				let nextState = {
+				  error: null,
+				  valid: false,
+				  value: '',
+				};
+
         if (success) {
-          this.setState({
+          nextState = {
+						...nextState,
             response: `Vi har mottatt din forespørsel og sender en invitasjon til "${value}" innen kort tid.`,
             sending: false,
-          });
+          };
         } else {
-          this.setState({
+          nextState = {
+						...nextState,
             error: 'Noe gikk galt. Send en e-post til invites@tech-no.io så inviterer vi deg.',
             sending: false,
-          });
+          };
         }
+
+				this.setState(nextState);
 
         this.locked = false;
       })
