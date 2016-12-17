@@ -1,5 +1,17 @@
 @import '~utils/__utils';
 
+header {
+	@media (min-width: 480px) {
+		max-width: 40em;
+	}
+
+	h1 {
+		@media (max-width: 480px) {
+			margin-top: 0;
+		}
+	}
+}
+
 svg {
   @media (min-width: 480px) {
     max-width: 28em;

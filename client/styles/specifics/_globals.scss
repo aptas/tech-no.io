@@ -11,11 +11,13 @@ button { cursor: pointer; }
 *:focus { outline: 0; }
 
 main {
-  min-height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+	// min-height: 100vmax;
+
+	@media (min-width: 480px) { min-height: 100vh; }
 }
 
 [hidden][aria-hidden="false"]:focus {
