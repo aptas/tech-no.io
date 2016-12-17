@@ -1,0 +1,49 @@
+body {
+  font: $root-font-weight #{$root-font-size}/#{$root-line-height} $root-font-family;
+
+  color: $color-font-base;
+}
+
+h1 {
+  font-size: 1.25em;
+  font-weight: $root-font-weight;
+
+  margin-top: 1em;
+
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: $root-font-weight;
+
+  margin-top: 1em;
+
+  line-height: 1.2;
+
+  // text-shadow: -0.06em 0 red, 0.06em 0 cyan;
+}
+
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+p {}
+
+address {}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+
+  transition: color 200 ease-out;
+
+  &:hover { color: $color-link-hover; }
+}
+
+b,
+strong { font-weight: 700; }
+
+i,
+em { font-style: italic; }

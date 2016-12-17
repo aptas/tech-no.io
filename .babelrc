@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "es2015",
+    "stage-1"
+  ],
+  "plugins": [
+    "syntax-jsx",
+    "inferno"
+  ],
+  "env": {
+    "test": {},
+    "development": {},
+    "production": {}
+  }
+}

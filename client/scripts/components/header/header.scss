@@ -1,0 +1,7 @@
+@import '~utils/__utils';
+
+svg {
+  @media (min-width: 480px) {
+    max-width: 28em;
+  }
+}

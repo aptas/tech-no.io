@@ -1,0 +1,72 @@
+@import '~utils/__utils';
+
+.silent {
+  opacity: 0.4;
+}
+
+form {
+  @media (min-width: 480px) {
+    max-width: 32em;
+  }
+}
+
+label {
+  position: relative;
+
+  flex: 1 1 100%;
+  width: 100%;
+
+  span {
+    position: absolute;
+    top: 1.5em;
+    left: 50%;
+
+    pointer-events: none;
+
+    transform: translate3d(-50%, 0, 0);
+
+    transition: transform 200ms $ease-out-quad;
+  }
+}
+
+input {
+  margin-top: 1em;
+  padding: 1em 0 0.5em;
+
+  width: 100%;
+
+  text-align: center;
+  color: $color-contrast-medium;
+
+  border-bottom: 0.1875em solid $color-contrast-medium;
+}
+
+.dirty {
+  span {
+    transform: translate3d(-50%, -1.5em, 0);
+  }
+}
+
+button {
+  padding: 0.375em 0.75em;
+  margin-top: 1em;
+
+  border-radius: 0.25em;
+
+  background: $color-accent-primary;
+}
+
+.error {
+  margin-top: 0.25em;
+
+  color: $color-accent-secondary;
+}
+
+.sending {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.response {
+  color: $color-accent-primary;
+}
