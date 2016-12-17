@@ -1,11 +1,4 @@
-# THREE.js Boilerplate
-
-#### Includes the following tools, tasks, and workflows:
-
-- Full asset pipeline and static html compilation using [Webpack](http://webpack.github.io/) module bundler.
-- Transipiling ES6 to ES5 using [Babel](https://babeljs.io/).
-- Assets filename revision for cache busting.
-- Travis CI integration that runs AVA tests and production build.
+# tech-no.io
 
 ## Installation
 If you've never used Node or yarn before, you'll need to install them.
