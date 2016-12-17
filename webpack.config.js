@@ -34,7 +34,7 @@ const config = {
   output: {
     // Output destination.
     path: path.resolve(__dirname, 'public'),
-    publicPath: dev ? '/' : '/tech-no.io/',
+    publicPath: '/',
     // Output filename. Hashing in production for cache busting.
     filename: `scripts/${production ? '[chunkhash:8]' : '[name]'}.js`,
     chunkFilename: `scripts/${production ? '[chunkhash:8]' : '[name]'}.js`,
