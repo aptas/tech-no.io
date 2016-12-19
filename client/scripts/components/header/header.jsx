@@ -19,8 +19,8 @@ import './header.scss';
 const Header = () =>
   <header>
     <Logo />
-    <h2>Lyst å bli en del av noe stort?</h2>
-    <h1>tech-norway er en slack-gruppe der fagfolk og ellers intresserte diskuterer alt innen teknologi og design.</h1>
+    <h2>Har du lyst til å bli en del av noe stort?</h2>
+    <h1>tech-norway er en slack-gruppe hvor fagfolk og andre interesserte diskuterer alt innen teknologi og design.</h1>
   </header>;
 
 export default Header;
