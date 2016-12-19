@@ -198,7 +198,7 @@ export default class Form extends Component {
 
     return (
       <section>
-        <p className={styles.silent}>Oppgi din e-post for å få en invite!</p>
+        <p className={styles.silent}>Oppgi din e-post for å få en invitasjon!</p>
         <form
           className={classNames(styles.form, { [styles.invalid]: !valid, [styles.sending]: sending })}
           onSubmit={this.onSubmit}
